@@ -2,15 +2,25 @@ import { atom, useAtom } from 'jotai'
 import { atomFamily } from 'jotai/utils'
 
 export type Framework =
+	| 'angular'
 	| 'html'
 	| 'jsx'
 	| 'preact'
 	| 'react'
+	| 'streamlit'
 	| 'svelte'
 	| 'vue'
 	| 'web component'
 
-export const FRAMEWORKS: Framework[] = ['preact', 'react', 'svelte', 'vue', 'web component'];
+export const FRAMEWORKS: Framework[] = [
+	'preact',
+	'react',
+	'svelte',
+	'vue',
+	'web component',
+	'angular',
+	'streamlit'
+]
 
 export type FrameworkMap = {
 	[K in Framework]?: string
